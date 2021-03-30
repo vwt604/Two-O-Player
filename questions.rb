@@ -9,6 +9,22 @@ class Questions
 
     puts "#{current_player}: What does #{@num_1} plus #{@num_2} equal?"
     ask_question
+    
+  end
+
+  def ask_question
+
+    @player_answer = gets.chomp
+
+    if @player_answer == @answer.to_s
+      puts "You got it!"
+      @correct = true
+
+    else
+      puts "Seriously? No!"
+      @correct = false
+
+    end
 
   end
 
